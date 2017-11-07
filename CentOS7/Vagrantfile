@@ -70,10 +70,8 @@ Vagrant.configure("2") do |config|
     sudo useradd vcp
     sudo mkdir ~/.ssh
     sudo chmod 600 -R /vagrant_data/.ssh
-    sudo ln -s /vagrant_data/.ssh/config ~/.ssh/config
-    sudo ln -s /vagrant_data/.ssh/id_rsa_git ~/.ssh/id_rsa_git
-    sudo chmod 600 ~/.ssh/id_rsa_git
-    sudo chmod 600 ~/.ssh/config
+    sudo cp -p /vagrant_data/.ssh/config ~/.ssh/config
+    sudo cp -p /vagrant_data/.ssh/id_rsa_git ~/.ssh/id_rsa_git
     sudo git clone git@github.com:katsudonik/ansible.git ~/ansible
   SHELL
 end
