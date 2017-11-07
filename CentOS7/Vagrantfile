@@ -69,6 +69,7 @@ Vagrant.configure("2") do |config|
     sudo yum -y install epel-release ansible git
     sudo useradd vcp
     sudo mkdir ~/.ssh
+    sudo chmod 600 -R /vagrant_data/.ssh
     sudo ln -s /vagrant_data/.ssh/config ~/.ssh/config
     sudo ln -s /vagrant_data/.ssh/id_rsa_git ~/.ssh/id_rsa_git
     sudo chmod -R 600 ~/.ssh
