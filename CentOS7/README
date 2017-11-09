@@ -1,3 +1,5 @@
 1. cd vagrantFiles/CentOS7
 2. git clone -b 2.x git://github.com/cakephp/cakephp.git data/cakephp
+3. chmod -R 777 data/cakephp
 3. vagrant up
+
