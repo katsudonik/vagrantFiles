@@ -3,7 +3,7 @@
 3. chmod -R 777 data/cakephp
 4. vagrant plugin install vagrant-disksize
 5. vagrant plugin install vagrant-vbguest
-#6. vagrant box add buildee package.box —force
+#6. vagrant box add CentOS7 package.box —force
 7. vagrant up
 8. vagrant ssh -c "chmod -R 777 /vagrant_data"
 9. vagrant ssh -c "systemctl start mysqld"
