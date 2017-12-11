@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
      yum -y install tomcat tomcat-webapps
-     #TODO change tomcat port from 8080
+     #TODO change tomcat port from 8080 to 8082
 
      yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
      setenforce 0
