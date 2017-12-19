@@ -19,3 +19,5 @@ sudo systemctl start tomcat
 
 access to:
 http://openam.example.com:8081/openam/config/options.htm
+
+select custom install
