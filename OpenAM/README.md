@@ -12,7 +12,10 @@ vagrant reload
 vagrant ssh
 
 vi /etc/hosts
-# set 127.0.0.1 openam.example.com
+# set "127.0.0.1 openam.example.com"
+
+vi /etc/tomcat/tomcat.conf
+# set "LANG="en_US""
 
 sudo systemctl start tomcat
 ```
