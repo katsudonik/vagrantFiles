@@ -9,4 +9,9 @@
 vagrant add ...
 vagrant up
 vagrant reload
+vagrant ssh
+
+sudo systemctl start tomcat
 ```
+
+http://localhost:8081/openam/config/options.htm
