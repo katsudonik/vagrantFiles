@@ -11,7 +11,11 @@ vagrant up
 vagrant reload
 vagrant ssh
 
+vi /etc/hosts
+# set 127.0.0.1 openam.example.com
+
 sudo systemctl start tomcat
 ```
 
-http://localhost:8081/openam/config/options.htm
+access to:
+http://openam.example.com:8081/openam/config/options.htm
