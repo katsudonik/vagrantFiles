@@ -3,7 +3,8 @@
 * https://www.ogis-ri.co.jp/otc/hiroba/technical/openid-connect/chap2.html
 * https://qiita.com/nanazero/items/56d6bc70b7348dce1aca
 * https://www.slideshare.net/kura_lab/openid-connect-id?next_slideshow=1
-
+* https://qiita.com/gzock/items/a64940833dbaae9802db
+* https://qiita.com/nanazero/items/10a593c6b0ac770ee92e
 
 ```
 vagrant add ...
