@@ -25,3 +25,5 @@ access to:
 http://openam.example.com:8081/openam/config/options.htm
 
 select custom install
+
+see.. https://github.com/k-tamura/openam-book-jp/blob/master/setup.md
