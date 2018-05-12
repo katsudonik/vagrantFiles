@@ -69,7 +69,7 @@ Vagrant.configure("2") do |config|
      yum -y install tomcat tomcat-webapps
      yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
      cp /vagrant/data/OpenAM-13.0.0.war /usr/share/tomcat/webapps/openam.war
-     setenforce 0
+     sed -i -e "s/SELINUX\=.*/SELINUX=disabled/g"  /etc/selinux/config
      systemctl restart tomcat
   SHELL
 end
