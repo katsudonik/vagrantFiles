@@ -27,11 +27,6 @@ Vagrant.configure("2") do |config|
   # NOTE: This will enable public access to the opened port
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  # Create a forwarded port mapping which allows access to a specific port
-  # within the machine from a port on the host machine and only allow access
-  # via 127.0.0.1 to disable public access
-  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
-
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
@@ -68,16 +63,16 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
+    sudo chmod 777 /vagrant_data/
     sed -i -e "s/SELINUX\=.*/SELINUX=disabled/g"  /etc/selinux/config
     setenforce 0 
     sudo yum -y install epel-release ansible git
-    sudo useradd vcp
     sudo mkdir ~/.ssh
-    sudo cp /vagrant_data/.ssh/config ~/.ssh/config
+#    sudo cp /vagrant_data/.ssh/config ~/.ssh/config
     sudo cp /vagrant_data/.ssh/id_rsa_git ~/.ssh/id_rsa_git
-    sudo chown vagtant:vagrant -R ~/.ssh/config
+#    sudo chown vagtant:vagrant -R ~/.ssh/config
     sudo ssh-keyscan github.com >> ~/.ssh/known_hosts
+    sudo chmod -R 600 ~/.ssh/
     sudo git clone git@github.com:katsudonik/ansible.git ~/ansible
-    cd ~/ansible; ansible-playbook -i localhost cakephp_custom.yml
 SHELL
 end
