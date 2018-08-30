@@ -5,6 +5,7 @@ vagrant plugin install vagrant-disksize
 vagrant plugin install vagrant-vbguest
 # vagrant box add —-force CentOS7 package.box
 vagrant up
+vagrant reload
 vagrant ssh -c "chmod -R 777 /vagrant_data"
 vagrant ssh -c "systemctl start mysqld"
 vagrant ssh -c "systemctl start httpd"
