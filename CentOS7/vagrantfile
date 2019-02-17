@@ -67,6 +67,7 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     sudo chmod 777 /vagrant/data/
+    sudo chmod 777 /vagrant_data/
     sed -i -e "s/SELINUX\=.*/SELINUX=disabled/g"  /etc/selinux/config
     setenforce 0 
     sudo yum -y install epel-release ansible git vim
